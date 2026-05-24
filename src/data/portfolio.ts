@@ -60,13 +60,13 @@ export const projects: Project[] = [
   {
     title: "AI Prompt Manager",
     description:
-      "A focused workspace for structuring, testing, and organizing reusable AI prompts.",
-    tags: ["Next.js", "AI", "PostgreSQL"],
+      "PromptDock is a local-first workspace for organizing, searching, and reusing AI prompts with fast creation and favorites.",
+    tags: ["Next.js", "TypeScript", "Zustand"],
     icon: Bot,
     gradient: "from-violet-500/25 via-blue-400/10 to-transparent",
-    status: "Concept",
-    github: "#",
-    demo: "#",
+    status: "Live",
+    github: "https://github.com/TRONGTIN0803/AI-Prompt-Manager",
+    demo: "https://phamtrongtin-ai-prompt-manager.vercel.app",
   },
   {
     title: "Creator Dashboard",
