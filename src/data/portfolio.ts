@@ -75,9 +75,9 @@ export const projects: Project[] = [
     tags: ["React", "Analytics", "SaaS"],
     icon: LayoutDashboard,
     gradient: "from-cyan-400/20 via-indigo-500/10 to-transparent",
-    status: "Planned",
-    github: "#",
-    demo: "#",
+    status: "Live",
+    github: "https://github.com/TRONGTIN0803/Creator-Dashboard",
+    demo: "https://phamtrongtin-creator-dashboard.vercel.app/",
   },
   {
     title: "AI Workflow Tool",
@@ -121,8 +121,16 @@ export const stack = [
 ];
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com/", handle: "Code and experiments" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", handle: "Professional profile" },
-  { label: "Instagram", href: "https://www.instagram.com/", handle: "Build in public" },
-  { label: "Email", href: "mailto:hello@tinpham.dev", handle: "hello@tinpham.dev" },
+  { label: "GitHub", href: "https://github.com/TRONGTIN0803", handle: "@TRONGTIN0803" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/tin-pham-380185411/",
+    handle: "Tin Pham",
+  },
+  { label: "Instagram", href: "https://www.instagram.com/tinthebuilder", handle: "@tinthebuilder" },
+  {
+    label: "Email",
+    href: "mailto:phamtrongtin0803@gmail.com",
+    handle: "phamtrongtin0803@gmail.com",
+  },
 ];

@@ -54,13 +54,17 @@ export function Hero() {
                 </a>
               </Button>
               <Button asChild variant="secondary">
-                <a href="https://github.com/" target="_blank" rel="noreferrer">
+                <a href="https://github.com/TRONGTIN0803" target="_blank" rel="noreferrer">
                   <Github className="size-4" />
                   GitHub
                 </a>
               </Button>
               <Button asChild variant="secondary">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/tin-pham-380185411/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Linkedin className="size-4" />
                   LinkedIn
                 </a>
