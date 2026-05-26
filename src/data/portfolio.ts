@@ -86,9 +86,9 @@ export const projects: Project[] = [
     tags: ["Workflow", ".NET", "LLM"],
     icon: Blocks,
     gradient: "from-fuchsia-500/20 via-violet-500/10 to-transparent",
-    status: "Research",
-    github: "#",
-    demo: "#",
+    status: "Live",
+    github: "https://github.com/TRONGTIN0803/AI-Workflow-Tool",
+    demo: "https://phamtrongtin-ai-workflow-tool.vercel.app/",
   },
 ];
 
