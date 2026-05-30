@@ -10,18 +10,18 @@ export function TechStack() {
         <Reveal>
           <SectionHeading
             eyebrow="04 / Stack"
-            title="Tools powering the system."
+            title="A practical stack for modern product work."
             description="A backend foundation evolving into full-stack, automation-first product engineering."
           />
         </Reveal>
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {stack.map((tool, index) => {
             const Icon = tool.icon;
             return (
               <Reveal key={tool.name} delay={index * 0.045}>
-                <div className="group flex items-center gap-3 rounded-2xl border border-white/[0.075] bg-white/[0.025] px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/25 hover:bg-violet-400/[0.06]">
-                  <Icon className="size-4 text-neutral-500 transition group-hover:text-violet-300" />
-                  <span className="text-sm text-neutral-300 transition group-hover:text-white">
+                <div className="group flex h-full min-h-24 items-center gap-3 bg-background px-5 py-4 transition duration-300 hover:bg-card">
+                  <Icon className="size-4 text-violet-100/48 transition group-hover:text-violet-300" />
+                  <span className="text-sm font-medium text-muted transition group-hover:text-foreground">
                     {tool.name}
                   </span>
                 </div>

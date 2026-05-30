@@ -11,20 +11,20 @@ export function Now() {
         <Reveal>
           <SectionHeading
             eyebrow="03 / Build In Public"
-            title="A living development log."
-            description="The operating dashboard behind my learning, building, and longer-term product direction."
+            title="Current operating rhythm."
+            description="What I am learning, shipping, and improving while building a stronger product engineering practice."
           />
         </Reveal>
-        <Reveal delay={0.1} className="surface relative mt-12 overflow-hidden rounded-3xl p-5 sm:p-8">
-          <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.06] pb-6">
+        <Reveal delay={0.1} className="relative mt-12 overflow-hidden rounded-lg border border-white/10 bg-card p-5 text-white sm:p-8">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[linear-gradient(100deg,transparent,rgba(124,92,255,0.22),transparent)]" />
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-6">
             <div className="flex items-center gap-3">
-              <span className="size-2 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,.8)]" />
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-neutral-300">
+              <span className="size-2 rounded-full bg-violet-400 shadow-[0_0_18px_rgba(124,92,255,.8)]" />
+              <p className="font-mono text-xs uppercase tracking-normal text-white/70">
                 Current Cycle
               </p>
             </div>
-            <Badge className="text-emerald-300">ACTIVE / ITERATING</Badge>
+            <Badge className="border-white/10 bg-white/10 text-white">Active / iterating</Badge>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {nowPanels.map((panel, index) => {
@@ -32,16 +32,16 @@ export function Now() {
               return (
                 <div
                   key={panel.title}
-                  className="rounded-2xl border border-white/[0.06] bg-white/[0.018] p-5"
+                  className="rounded-lg border border-white/10 bg-white/[0.045] p-5"
                 >
                   <div className="flex items-center gap-3">
                     <Icon className="size-4 text-violet-300" />
-                    <h3 className="text-sm font-medium text-neutral-200">{panel.title}</h3>
+                    <h3 className="text-sm font-semibold text-white">{panel.title}</h3>
                   </div>
                   <div className="mt-5 space-y-3">
                     {panel.items.map((item, itemIndex) => (
-                      <div key={item} className="flex items-center gap-3 text-sm text-muted">
-                        <span className="font-mono text-[10px] text-neutral-600">
+                      <div key={item} className="flex items-center gap-3 text-sm text-white/66">
+                        <span className="font-mono text-[10px] text-white/35">
                           0{index + 1}.0{itemIndex + 1}
                         </span>
                         <span>{item}</span>

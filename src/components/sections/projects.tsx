@@ -14,15 +14,15 @@ export function Projects() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="02 / Projects"
-              title="Products shipped and in progress."
-              description="Practical AI tools, creator workflows, and the product ecosystem I am building toward."
+              title="Selected systems with real product intent."
+              description="Practical AI tools, creator workflows, and focused interfaces that show the direction I am building toward."
             />
-            <Badge className="w-fit border-violet-300/15 bg-violet-300/[0.07] text-violet-200">
-              FEATURED / LIVE
+            <Badge className="w-fit border-violet-400/25 bg-violet-500/14 text-violet-100">
+              Selected work
             </Badge>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4">
           {projects.map((project, index) => {
             const Icon = project.icon;
             const isLive = project.demo !== "#";
@@ -30,8 +30,8 @@ export function Projects() {
               <Reveal key={project.title} delay={index * 0.08}>
                 <article
                   className={cn(
-                    "surface group relative flex h-full flex-col overflow-hidden rounded-3xl transition duration-300 hover:-translate-y-1.5 hover:border-white/[0.14] hover:shadow-glow",
-                    isLive && "cursor-pointer hover:border-violet-300/30 hover:shadow-glow",
+                    "group relative grid overflow-hidden rounded-lg border border-white/10 bg-card/78 transition duration-300 hover:-translate-y-1 hover:border-violet-300/28 hover:bg-white/[0.035] md:grid-cols-[0.82fr_1.18fr]",
+                    isLive && "cursor-pointer",
                   )}
                 >
                   {isLive ? (
@@ -40,33 +40,37 @@ export function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Open ${project.title} live demo`}
-                      className="absolute inset-0 z-10 rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/70 focus-visible:ring-inset"
+                      className="absolute inset-0 z-10 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/40 focus-visible:ring-inset"
                     />
                   ) : null}
-                  <div className={cn("relative h-48 overflow-hidden bg-gradient-to-br", project.gradient)}>
-                    <div className="absolute inset-5 rounded-2xl border border-white/[0.08] bg-black/15 p-4 backdrop-blur-[1px]">
+                  <div className={cn("relative min-h-72 overflow-hidden bg-gradient-to-br p-5", project.gradient)}>
+                    <div className="grid-fade absolute inset-0 opacity-70" />
+                    <div className="relative flex h-full min-h-64 flex-col justify-between rounded-lg border border-white/10 bg-background/55 p-5">
                       <div className="flex items-center justify-between">
-                        <Icon className="size-5 text-violet-200" />
-                        <span className="font-mono text-[10px] tracking-[0.18em] text-neutral-400">
+                        <span className="flex size-11 items-center justify-center rounded-full bg-violet-500 text-white">
+                          <Icon className="size-5" />
+                        </span>
+                        <span className="font-mono text-[10px] uppercase tracking-normal text-violet-100/60">
                           {project.status}
                         </span>
                       </div>
-                      <div className="mt-8 space-y-2">
-                        <span className="block h-1.5 w-3/5 rounded-full bg-white/20" />
-                        <span className="block h-1.5 w-4/5 rounded-full bg-white/10" />
-                        <span className="block h-1.5 w-2/5 rounded-full bg-violet-300/25" />
+                      <div>
+                        <p className="font-mono text-[11px] uppercase tracking-normal text-violet-100/60">
+                          Case 0{index + 1}
+                        </p>
+                        <div className="mt-4 h-1.5 w-24 rounded-full bg-violet-400" />
                       </div>
                     </div>
                     {isLive ? (
-                      <span className="pointer-events-none absolute bottom-4 right-4 z-20 inline-flex items-center gap-1.5 rounded-full border border-violet-300/20 bg-background/75 px-3 py-1.5 text-[11px] font-medium text-violet-100 opacity-0 backdrop-blur-sm transition group-hover:opacity-100 group-focus-within:opacity-100">
+                      <span className="pointer-events-none absolute bottom-5 right-5 z-20 inline-flex items-center gap-1.5 rounded-full bg-violet-500 px-3 py-1.5 text-[11px] font-semibold text-white opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100">
                         Open live demo
                         <ArrowUpRight className="size-3" />
                       </span>
                     ) : null}
                   </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-xl font-medium tracking-tight text-white">{project.title}</h3>
-                    <p className="mt-3 flex-1 text-sm leading-7 text-muted">{project.description}</p>
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
+                    <h3 className="text-3xl font-semibold tracking-normal text-foreground sm:text-4xl">{project.title}</h3>
+                    <p className="mt-4 max-w-2xl flex-1 text-base leading-7 text-muted">{project.description}</p>
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag}>{tag}</Badge>
@@ -77,7 +81,7 @@ export function Projects() {
                         <button
                           type="button"
                           disabled
-                          className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] px-4 py-2 text-xs text-neutral-400"
+                          className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs text-muted"
                         >
                           <Github className="size-3.5" />
                           GitHub
@@ -87,7 +91,7 @@ export function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 text-xs text-neutral-200 transition hover:border-violet-300/35 hover:text-white"
+                          className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-semibold text-violet-100 transition hover:border-violet-300/35 hover:text-white"
                         >
                           <Github className="size-3.5" />
                           GitHub
@@ -97,7 +101,7 @@ export function Projects() {
                         <button
                           type="button"
                           disabled
-                          className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] px-4 py-2 text-xs text-neutral-400"
+                          className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs text-muted"
                         >
                           Live Demo
                           <ArrowUpRight className="size-3.5" />
@@ -107,9 +111,9 @@ export function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full border border-violet-400/45 bg-violet-500 px-4 py-2 text-xs font-medium text-white shadow-[0_8px_22px_rgba(124,107,255,0.3)] transition hover:border-violet-300 hover:bg-violet-400"
+                          className="inline-flex items-center gap-2 rounded-full bg-violet-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-violet-400"
                         >
-                          View Live Demo
+                          Live Demo
                           <ArrowUpRight className="size-3.5" />
                         </a>
                       )}

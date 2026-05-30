@@ -12,13 +12,15 @@ const config: Config = {
         border: "hsl(var(--border))",
         card: "hsl(var(--card))",
         accent: "hsl(var(--accent))",
+        signal: "hsl(var(--signal))",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Arial", "sans-serif"],
         mono: ["var(--font-mono)", "Consolas", "monospace"],
       },
       boxShadow: {
-        glow: "0 0 80px -26px rgba(116, 99, 255, 0.45)",
+        glow: "0 28px 90px -54px rgba(124, 92, 255, 0.5)",
+        signal: "0 18px 60px -30px rgba(124, 92, 255, 0.65)",
       },
       keyframes: {
         pulseGlow: {

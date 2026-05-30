@@ -33,25 +33,25 @@ export const navigation = [
 ];
 
 export const stats = [
-  { value: "2+", label: "Years in .NET" },
-  { value: "AI", label: "Systems focus" },
-  { value: "Public", label: "Building mode" },
+  { value: "2+", label: "Years building with .NET" },
+  { value: "3", label: "Live product experiments" },
+  { value: "AI", label: "Workflow and product focus" },
 ];
 
 export const aboutCards = [
   {
     title: "Engineering",
-    copy: ".NET Developer with 2 years of experience building reliable software foundations.",
+    copy: ".NET developer with a reliability-first backend foundation and a growing full-stack product lens.",
     icon: Code2,
   },
   {
     title: "Exploration",
-    copy: "Learning ReactJS, AI workflows, and content systems for the next generation of products.",
+    copy: "Deepening React, Next.js, AI workflows, and creator systems through public, usable projects.",
     icon: BrainCircuit,
   },
   {
     title: "Direction",
-    copy: "Interested in AI, productivity systems, the creator economy, and modern web products.",
+    copy: "Focused on AI products, productivity systems, creator tooling, and interfaces with real utility.",
     icon: Compass,
   },
 ];
@@ -63,7 +63,7 @@ export const projects: Project[] = [
       "PromptDock is a local-first workspace for organizing, searching, and reusing AI prompts with fast creation and favorites.",
     tags: ["Next.js", "TypeScript", "Zustand"],
     icon: Bot,
-    gradient: "from-violet-500/25 via-blue-400/10 to-transparent",
+    gradient: "from-violet-500/24 via-card to-teal-500/10",
     status: "Live",
     github: "https://github.com/TRONGTIN0803/AI-Prompt-Manager",
     demo: "https://phamtrongtin-ai-prompt-manager.vercel.app",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "A command center for content pipelines, publishing cadence, and audience insight.",
     tags: ["React", "Analytics", "SaaS"],
     icon: LayoutDashboard,
-    gradient: "from-cyan-400/20 via-indigo-500/10 to-transparent",
+    gradient: "from-violet-500/18 via-card to-violet-400/10",
     status: "Live",
     github: "https://github.com/TRONGTIN0803/Creator-Dashboard",
     demo: "https://phamtrongtin-creator-dashboard.vercel.app/",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
       "Composable automations connecting ideas, models, and repeatable creator outcomes.",
     tags: ["Workflow", ".NET", "LLM"],
     icon: Blocks,
-    gradient: "from-fuchsia-500/20 via-violet-500/10 to-transparent",
+    gradient: "from-teal-500/16 via-card to-violet-500/14",
     status: "Live",
     github: "https://github.com/TRONGTIN0803/AI-Workflow-Tool",
     demo: "https://phamtrongtin-ai-workflow-tool.vercel.app/",
